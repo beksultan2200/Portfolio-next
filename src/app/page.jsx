@@ -1,9 +1,19 @@
 import scss from './page.module.scss'
+import Script from 'next/script'
 import { FaLinkedin, FaGithub, FaTelegram, FaTiktok, FaSquareInstagram } from "react-icons/fa6";
-
 const page = () => {
   return (
     <main>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-EB51K2GSVW" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-EB51K2GSVW');
+        `}
+      </Script>
       <section id='hero' className={scss.hero}>
         <div className={scss.hero__content}>
           <h1>
